@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>CSS Backgrounds</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,source code,colors,demos,tips">
+<meta name="Description" content="Well organized and easy to understand Web bulding tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, and XML.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="/stdtheme.css" />
+
+</head>
+<body>
+
+<div class='w3-container top'>
+  <a class='w3schools-logo' href='http://www.w3schools.com'>w3schools<span class='dotcom'>.com</span></a>
+  <div class='w3-right toptext w3-wide'>THE WORLD'S LARGEST WEB DEVELOPER SITE</div>
+</div>
+<div class='w3-navbar w3-card-2 w3-slim topnav' id='topnav'>
+<div style='overflow:auto;'>
+  <div style='float:left; width:50%; overflow:hidden; height:44px'>
+    <a href='javascript:void(0);' class='topnav-localicons w3-hide-large w3-left' onclick='open_menu()' title='Menu'>&#9776;</a>  <!-- show menu -->
+    <a href='/default.asp' class='topnav-icons fa fa-home w3-left' title='Home'></a>
+    <a href='/html/default.asp' class='w3-hide-small' title='HTML Tutorial'>HTML</a>
+    <a href='/css/default.asp' class='w3-hide-small' title='CSS Tutorial'>CSS</a>
+    <a href='/js/default.asp' class='w3-hide-small' title='JavaScript Tutorial'>JAVASCRIPT</a>
+    <a href='/sql/default.asp' class='w3-hide-small' title='SQL Tutorial'>SQL</a>
+    <a href='/php/default.asp' class='w3-hide-small' title='PHP Tutorial'>PHP</a>
+    <a href='/bootstrap/default.asp' class='w3-hide-small' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+    <a href='/jquery/default.asp' class='w3-hide-small' title='jQuery Tutorial'>JQUERY</a>
+    <a href='/angular/default.asp' class='w3-hide-small' title='Angular Tutorial'>ANGULAR</a>
+    <a href='/xml/default.asp' class='w3-hide-small' title='XML Tutorial'>XML</a>
+  </div>
+  <div style='float:right; width:110px; overflow:hidden; height:44px;'>
+    <a href='javascript:void(0);' class='topnav-icons fa fa-search w3-right' onclick='w3_open_nav("search")' title='Search W3Schools'></a>
+    <a href='javascript:void(0);' class='topnav-icons fa fa-globe w3-right' onclick='openGoogleTranslate(); w3_open_nav("translate")' title='Translate W3Schools'></a>
+  </div>  <!-- use javascript (w3_open_nav) to show pull down lsit -->
+  <div class='w3-hide-small' style='float:right;width:30%;overflow:hidden;height:44px;'>
+  <a id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>TUTORIALS <i class='fa fa-caret-down'></i>
+  <i class='fa fa-caret-up' style='display:none'></i></a>
+  <a id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i>
+  <i class='fa fa-caret-up' style='display:none'></i></a>
+  <a id='topnavbtn_examples' href='javascript:void(0);' onclick='w3_open_nav("examples")' title='Examples'>EXAMPLES <i class='fa fa-caret-down'></i>
+  <i class='fa fa-caret-up' style='display:none'></i></a>
+  <a href='/forum/default.asp'>FORUM</a></div>
+</div>
+<div id='nav_tutorials' class='w3-dropnav w3-light-grey w3-card-2 w3-center'></div>
+<div id='nav_references' class='w3-dropnav w3-light-grey w3-card-2 w3-center'></div>
+<div id='nav_examples' class='w3-dropnav w3-light-grey w3-card-2 w3-center'></div>
+<div id='nav_translate' class='w3-dropnav w3-light-grey w3-card-2 w3-center'></div>
+<div id='nav_search' class='w3-dropnav w3-light-grey w3-card-2 w3-center'></div></div>
+
+<div class='w3-row w3-light-grey' id='belowtopnav'>
+<div class='w3-col w3-slim' id='leftmenu'>
+<div id='leftmenuinner'>
+<div class='w3-light-grey' id='leftmenuinnerinner'>
+<a href='javascript:void(0)' onclick='close_menu()' class='w3-closebtn w3-hide-large w3-large' style='padding:3px 12px;'>&times;</a>
+  <h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+  <a target="_top" href="default.asp">CSS HOME</a>
+  <a target="_top" href="css_intro.asp">CSS Introduction</a>
+  <a target="_top" href="css_syntax.asp">CSS Syntax</a>
+  <a target="_top" href="css_howto.asp">CSS How To</a>
+  <a target="_top" href="css_colors.asp">CSS Colors</a>
+  <a target="_top" href="css_background.asp">CSS Backgrounds</a>
+  <a target="_top" href="css_border.asp">CSS Borders</a>
+  <a target="_top" href="css_margin.asp">CSS Margins</a>
+  <a target="_top" href="css_padding.asp">CSS Padding</a>
+  <a target="_top" href="css_dimension.asp">CSS Height/Width</a>
+  <a target="_top" href="css_boxmodel.asp">CSS Box Model</a>
+  <a target="_top" href="css_outline.asp">CSS Outline</a>
+  <a target="_top" href="css_text.asp">CSS Text</a>
+  <a target="_top" href="css_font.asp">CSS Fonts</a>
+  <a target="_top" href="css_link.asp">CSS Links</a>
+  <a target="_top" href="css_list.asp">CSS Lists</a>
+  <a target="_top" href="css_table.asp">CSS Tables</a>
+  <a target="_top" href="css_display_visibility.asp">CSS Display</a>
+  <a target="_top" href="css_max-width.asp">CSS Max-width</a>
+  <a target="_top" href="css_positioning.asp">CSS Position</a>
+  <a target="_top" href="css_overflow.asp">CSS Overflow</a>
+  <a target="_top" href="css_float.asp">CSS Float</a>
+  <a target="_top" href="css_inline-block.asp">CSS Inline-block</a>
+  <a target="_top" href="css_align.asp">CSS Align</a>
+  <a target="_top" href="css_combinators.asp">CSS Combinators</a>
+  <a target="_top" href="css_pseudo_classes.asp">CSS Pseudo-class</a>
+  <a target="_top" href="css_pseudo_elements.asp">CSS Pseudo-element</a>
+  <a target="_top" href="css_image_transparency.asp">CSS Opacity</a>
+  <a target="_top" href="css_navbar.asp">CSS Navigation Bar</a>
+  <a target="_top" href="css_dropdowns.asp">CSS Dropdowns</a>
+  <a target="_top" href="css_tooltip.asp">CSS Tooltips</a>
+  <a target="_top" href="css_image_gallery.asp">CSS Image Gallery</a>
+  <a target="_top" href="css_image_sprites.asp">CSS Image Sprites</a>
+  <a target="_top" href="css_attribute_selectors.asp">CSS Attr Selectors</a>
+  <a target="_top" href="css_form.asp">CSS Forms</a>
+  <a target="_top" href="css_counters.asp">CSS Counters</a>
+  <br>
+  <h2 class="left"><span class="left_h2">CSS3</span></h2>
+  <a target="_top" href="css3_intro.asp">CSS3 Introduction</a>
+  <a target="_top" href="css3_borders.asp">CSS3 Rounded Corners</a>
+  <a target="_top" href="css3_border_images.asp">CSS3 Border Images</a>
+  <a target="_top" href="css3_backgrounds.asp">CSS3 Backgrounds</a>
+  <a target="_top" href="css3_colors.asp">CSS3 Colors</a>
+  <a target="_top" href="css3_gradients.asp">CSS3 Gradients</a>
+  <a target="_top" href="css3_shadows.asp">CSS3 Shadows</a>
+  <a target="_top" href="css3_text_effects.asp">CSS3 Text</a>
+  <a target="_top" href="css3_fonts.asp">CSS3 Fonts</a>
+  <a target="_top" href="css3_2dtransforms.asp">CSS3 2D Transforms</a>
+  <a target="_top" href="css3_3dtransforms.asp">CSS3 3D Transforms</a>
+  <a target="_top" href="css3_transitions.asp">CSS3 Transitions</a>
+  <a target="_top" href="css3_animations.asp">CSS3 Animations</a>
+  <a target="_top" href="css3_images.asp">CSS3 Images</a>
+  <a target="_top" href="css3_buttons.asp">CSS3 Buttons</a>
+  <a target="_top" href="css3_pagination.asp">CSS3 Pagination</a>
+  <a target="_top" href="css3_multiple_columns.asp">CSS3 Multiple Columns</a>
+  <a target="_top" href="css3_user_interface.asp">CSS3 User Interface</a>
+  <a target="_top" href="css3_box-sizing.asp">CSS3 Box Sizing</a>
+  <a target="_top" href="css3_flexbox.asp">CSS3 Flexbox</a>
+  <a target="_top" href="css3_mediaqueries.asp">CSS3 Media Queries</a>
+  <a target="_top" href="css3_mediaqueries_ex.asp">CSS3 MQ Examples</a>
+  <br>
+  <h2 class="left"><span class="left_h2">CSS</span> Responsive</h2>
+  <a target="_top" href="css_rwd_intro.asp">RWD Intro</a>
+  <a target="_top" href="css_rwd_viewport.asp">RWD Viewport</a>
+  <a target="_top" href="css_rwd_grid.asp">RWD Grid View</a>
+  <a target="_top" href="css_rwd_mediaqueries.asp">RWD Media Queries</a>
+  <a target="_top" href="css_rwd_images.asp">RWD Images</a>
+  <a target="_top" href="css_rwd_videos.asp">RWD Videos</a>
+  <a target="_top" href="css_rwd_frameworks.asp">RWD Frameworks</a>
+  <a target="_top" href="css_rwd_templates.asp">RWD Templates</a>
+  <br>
+  <h2 class="left"><span class="left_h2">CSS</span> Examples</h2>
+  <a target="_top" href="css_examples.asp">CSS Examples</a>
+  <a target="_top" href="css_quiz.asp">CSS Quiz</a>
+  <a target="_top" href="css_exam.asp">CSS Certificate</a>
+  <br>
+  <h2 class="left"><span class="left_h2">CSS</span> References</h2>
+  <a target="_top" href="/cssref/default.asp">CSS Reference</a>
+  <a target="_top" href="/cssref/css_selectors.asp">CSS Selectors</a>
+  <a target="_top" href="/cssref/css_functions.asp">CSS Functions</a>
+  <a target="_top" href="/cssref/css_ref_aural.asp">CSS Reference Aural</a>
+  <a target="_top" href="/cssref/css_websafe_fonts.asp">CSS Web Safe Fonts</a>
+  <a target="_top" href="/cssref/css_animatable.asp">CSS Animatable</a>
+  <a target="_top" href="/cssref/css_units.asp">CSS Units</a>
+  <a target="_top" href="/cssref/css_pxtoemconversion.asp">CSS PX-EM Converter</a>
+  <a target="_top" href="/cssref/css_colors.asp">CSS Colors</a>
+  <a target="_top" href="/cssref/css_colors_legal.asp">CSS Color Values</a>
+  <a target="_top" href="/cssref/css_default_values.asp">CSS Default Values</a>
+  <a target="_top" href="/cssref/css3_browsersupport.asp">CSS3 Browser Support</a><br><br></div></div>&nbsp;</div>
+<div class='w3-rest'>
+<div class='w3-row w3-white'>
+<div class='w3-col l10 m12' id='main'>
+<div id='mainLeaderboard' style='overflow:hidden;'>
+<!-- MainLeaderboard-->
+<div id='div-gpt-ad-1422003450156-2'>
+<script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
+</div></div>
+<!-- begin main context -->
+
+<h1>CSS <span class="color_h1">Backgrounds</span></h1>
+<div class="nav">
+<div class="prev"><a class="chapter" href="css_colors.asp">&laquo; Previous</a></div>
+<!--<div class="video" style="float:left;"><a class="chapter" style="font-size:15px" href="http://youtu.be/wFjEZw-FF_w" target="_blank">Watch video of this tutorial</a></div>-->
+<div class="next"><a class="chapter" href="css_border.asp">Next Chapter &raquo;</a></div>
+</div>
+<br>
+
+<div style="width:100%; border:1px solid gray; padding:8px; background:#e1efbb url('mountain.jpg')">
+<p style="margin-right:150px;">The CSS background properties are used to define the background effects 
+for elements.</p>
+<p>CSS background properties:</p>
+<ul>
+  <li>background-color</li>
+  <li>background-image</li>
+  <li>background-repeat</li>
+  <li>background-attachment</li>
+  <li>background-position</li>
+</ul>
+</div>
+<hr>
+
+<h2>Background Color</h2>
+<p>The <code>background-color</code> property specifies the background color of an element.</p>
+<p>The background color of a page is set like this:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br>&nbsp;&nbsp;&nbsp; background-color: lightblue;<br>} <!-- content in code rect -->
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-color_body" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<p>With CSS, a color is most often specified by:</p>
+<ul>
+	<li>a valid color name - like &quot;red&quot;</li>
+	<li>a HEX value - like &quot;#ff0000&quot;</li>
+	<li>an RGB value - like &quot;rgb(255,0,0)&quot;</li>
+</ul>
+<p>Look at <a href="/cssref/css_colors_legal.asp">CSS Color Values</a> for a complete 
+list of possible color values.</p>
+<p>In the example below, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements have different background colors:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+h1 {<br>&nbsp;&nbsp;&nbsp; background-color: green;<br>}<br><br>
+	div {<br>&nbsp;&nbsp;&nbsp; background-color: lightblue;<br>}<br><br>p {<br>&nbsp;&nbsp;&nbsp; background-color: 
+	yellow;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-color_elements" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Background Image</h2>
+<p>The <code>background-image</code> property specifies an image to use as the background of an element.</p>
+<p>By default, the image is repeated so it covers the entire element.</p>
+<p>The background image for a page can be set like this:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br>&nbsp;&nbsp;&nbsp; background-image: url(&quot;paper.gif&quot;);<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+
+<p>Below is an example of a <strong>bad</strong> combination of text and background image. The text is 
+hardly readable:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br>&nbsp;&nbsp;&nbsp; background-image: url(&quot;bgdesert.jpg&quot;);<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_bad" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<div class="w3-note">
+  <p><b>Note:</b> When using a background image, use an image that does not disturb the text.</p>
+</div>
+
+<hr>
+
+<h2>Background Image - Repeat Horizontally or Vertically</h2>
+<p>By default, the <code>background-image</code> property repeats an image both horizontally and vertically.</p>
+<p>Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body
+{<br>
+&nbsp;&nbsp;&nbsp;
+background-image: url(&quot;gradient_bg.png&quot;);<br>
+}
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_gradient1" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<p>If the image above is repeated only horizontally (<code>background-repeat: repeat-x;</code>), the background will look 
+better:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body
+{<br>
+&nbsp;&nbsp;&nbsp;
+background-image: url(&quot;gradient_bg.png&quot;);<br>
+&nbsp;&nbsp;&nbsp;
+background-repeat: repeat-x;<br>
+}
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_gradient2" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<div class="w3-note">
+  <p><b>Tip:</b> To repeat an image vertically, set <code>background-repeat: repeat-y;</code></p>
+</div>
+
+<hr>
+
+<h2>Background Image - Set position and no-repeat</h2>
+<p>Showing the background image only once is also specified by the <code>background-repeat</code> property:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body
+{<br>
+&nbsp;&nbsp;&nbsp;
+background-image: url(&quot;img_tree.png&quot;);<br>
+&nbsp;&nbsp;&nbsp;
+background-repeat: no-repeat;<br>
+}
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_norepeat" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<p>In the example above, the background image is shown in the same place as the text. We want to change the position of the image, so that it does not 
+disturb the text too much.</p>
+<p>The position of the image is specified by the <code>background-position</code> property:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body
+{<br>
+&nbsp;&nbsp;&nbsp;
+background-image: url(&quot;img_tree.png&quot;);<br>
+&nbsp;&nbsp;&nbsp;
+background-repeat: no-repeat;<br>
+&nbsp;&nbsp;&nbsp;
+background-position: right top;<br>
+}
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_position" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Background Image - Fixed position</h2>
+<p>To specify that the background image should be fixed (will not scroll with the rest of the page), 
+use the <code>background-attachment</code> property:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body
+{<br>
+&nbsp;&nbsp;&nbsp;
+background-image: url(&quot;img_tree.png&quot;);<br>
+&nbsp;&nbsp;&nbsp;
+background-repeat: no-repeat;<br>
+&nbsp;&nbsp;&nbsp;
+background-position: right top;<br>
+&nbsp;&nbsp;&nbsp; background-attachment: fixed;<br>}
+</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background-image_attachment" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<hr>
+
+<h2>Background - Shorthand property</h2>
+<p>To shorten the code, it is also possible to specify all the background properties in one 
+single property. This is called a shorthand property.</p>
+<p>The shorthand property for background is <code>background</code>:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+body {<br>&nbsp;&nbsp;&nbsp; background: #ffffff url(&quot;img_tree.png&quot;) no-repeat right top;<br>}</div>
+<a target="_blank" href="tryit.asp?filename=trycss_background_shorthand" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+</div>
+<p>
+When using the shorthand property the order of the property values is:</p>
+<ul>
+	<li><code>background-color</code></li>
+	<li><code>background-image</code></li>
+	<li><code>background-repeat</code></li>
+	<li><code>background-attachment</code></li>
+	<li><code>background-position</code></li>
+</ul>
+<p>It does not matter if one of the property values is missing, as long as the 
+other ones are in this order.</p>
+<hr>
+
+<h2>Test Yourself with Exercises!</h2>
+<p>
+<a class="w3-btn" href="exercise.asp?filename=exercise_background1" target="_blank">Exercise 1 &raquo;</a>&nbsp;
+<a class="w3-btn" href="exercise.asp?filename=exercise_background2" target="_blank">Exercise 2 &raquo;</a>&nbsp;
+<a class="w3-btn" href="exercise.asp?filename=exercise_background3" target="_blank">Exercise 3 &raquo;</a>&nbsp;
+<a class="w3-btn" href="exercise.asp?filename=exercise_background4" target="_blank">Exercise 4 &raquo;</a>&nbsp;
+<a class="w3-btn" href="exercise.asp?filename=exercise_background5" target="_blank">Exercise 5 &raquo;</a>
+</p>
+<hr>
+
+<h2>All CSS Background Properties</h2>
+
+<table class="w3-table-all notranslate">
+  <tr>
+    <th style="width:30%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="/cssref/css3_pr_background.asp">background</a></td>
+    <td>Sets all the background properties in one declaration</td>
+  </tr>
+  <tr>
+    <td><a href="/cssref/pr_background-attachment.asp">background-attachment</a></td>
+    <td>Sets whether a background image is fixed or scrolls with the rest of the page</td>
+  </tr>
+  <tr>
+    <td><a href="/cssref/pr_background-color.asp">background-color</a></td>
+    <td>Sets the background color of an element</td>
+  </tr>
+  <tr>
+    <td><a href="/cssref/pr_background-image.asp">background-image</a></td>
+    <td>Sets the background image for an element</td>
+  </tr>
+  <tr>
+    <td><a href="/cssref/pr_background-position.asp">background-position</a></td>
+    <td>Sets the starting position of a background image</td>
+  </tr>
+  <tr>
+    <td><a href="/cssref/pr_background-repeat.asp">background-repeat</a></td>
+    <td>Sets how a background image will be repeated</td>
+  </tr>
+</table>
+
+<br>
+<div class="nav">
+<div class="prev"><a class="chapter" href="css_colors.asp">&laquo; Previous</a></div>
+<!--<div class="home" style="float:left;"><a class="chapter" style="font-size:15px" href="http://youtu.be/wFjEZw-FF_w" target="_blank">Watch video of this tutorial</a></div>-->
+<div class="next"><a class="chapter" href="css_border.asp">Next Chapter &raquo;</a></div>
+</div>
+</div>
+<div class="w3-col l2 m12" id="right">
+
+<div class="sidesection">
+<div id="skyscraper">
+<div id="div-gpt-ad-1422003450156-5">
+<script>
+ googletag.cmd.push(function() {
+ googletag.display('div-gpt-ad-1422003450156-5');
+ });
+ </script> 
+</div>
+</div>
+</div>
+
+<!-- start right side section -->
+
+<div class="sidesection">
+<h3>W3SCHOOLS EXAMS</h3>
+<a target="_blank" href="http://www.w3schools.com/cert/default.asp">
+HTML, CSS, JavaScript, PHP, jQuery, Bootstrap and XML Certifications</a>
+</div>
+
+<div class="sidesection">
+<h3>COLOR PICKER</h3>
+<a href="/colors/colors_picker.asp">
+<img src="/images/colorpicker.gif" alt="colorpicker"></a>
+</div>
+
+<div class="sidesection">
+<h3>LEARN MORE:</h3>
+<p>
+<a href="/colors/colors_converter.asp">Color Converter</a><br>
+<a href="/howto/howto_google_maps.asp">Google Maps</a><br>
+<a href="/howto/howto_css_animate_buttons.asp">Animated Buttons</a><br>
+<a href="/howto/howto_css_modals.asp">Modal Boxes</a><br>
+<a href="/howto/howto_css_modal_images.asp">Modal Images</a><br>
+<a href="/howto/howto_css_tooltip.asp">Tooltips</a><br>
+<a href="/howto/howto_css_loader.asp">Loaders</a><br>
+<a href="/howto/howto_js_animate.asp">JS Animations</a><br>
+<a href="/howto/howto_js_progressbar.asp">Progress Bars</a><br>
+<a href="/howto/howto_js_dropdown.asp">Dropdowns</a><br>
+<a href="/howto/howto_js_slideshow.asp">Slideshow</a><br>
+<a href="/howto/howto_js_sidenav.asp">Side Navigation</a><br>
+<a href="/howto/howto_html_include.asp">HTML Includes</a><br>
+<a href="/w3css/w3css_color_palettes.asp">Color Palettes</a><br>
+<a href="/w3css/w3css_code.asp">Code Coloring</a><br>
+<a href="/w3css/w3css_templates.asp">HTML Templates</a>
+</p>
+</div>
+
+<div class="sidesection">
+<h3>SHARE THIS PAGE</h3>
+<div class="w3-text-grey sharethis">
+<script>
+<!--
+try{  // try to share paragraphs to different social media
+loc=location.pathname;
+if (loc.toUpperCase().indexOf(".ASP")<0) loc=loc+"default.asp";
+txt='<a href="http://www.facebook.com/sharer.php?u=http://www.w3schools.com'+loc+'" target="_blank" title="Facebook"><span class="fa fa-facebook-square fa-2x"></span></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading http://www.w3schools.com'+loc+'" target="_blank" title="Twitter"><span class="fa fa-twitter-square fa-2x"></span></a>';
+txt=txt+'<a href="https://plus.google.com/share?url=http://www.w3schools.com'+loc+'" target="_blank" title="Google+"><span class="fa fa-google-plus-square fa-2x"></span></a>';
+document.write(txt);
+} catch(e) {}
+//-->
+</script>
+</div>
+</div>
+
+<div class="sidesection w3-text-grey sharethis">
+<a href="javascript:void(0);" onclick="clickFBLike()" title="Like W3Schools on Facebook">
+<span class="fa fa-thumbs-o-up fa-2x"></span></a>
+<div id="fblikeframe">
+<div id="popupframe"></div>
+<div id="popupDIV"></div>
+</div>
+</div>       
+
+</div>
+</div>
+
+<!-- start footer -->
+
+<div class="footer w3-container w3-white">      
+
+<hr>
+<div style="overflow:auto">
+<!-- BottomMediumRectangle -->
+<div class="bottomad" id='div-gpt-ad-1422003450156-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
+</script>
+</div>
+<!-- RightBottomMediumRectangle -->
+<div class="bottomad" id='div-gpt-ad-1422003450156-3'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
+</script>
+</div>
+</div>
+
+<hr>
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m3 s12">
+<a href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;">REPORT ERROR</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="" target="_blank" onclick="printPage();return false;">PRINT PAGE</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="/forum/default.asp" target="_blank">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="/about/default.asp" target="_top">ABOUT</a>
+</div>
+</div>
+<hr>
+<!-- report error -->
+
+<div class="w3-light-grey w3-padding w3-center" id="err_form" style="display:none;">
+<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span>     
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-group">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input" type="text" style="width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-group">      
+<label for="err_email">Page address:</label>
+<input class="w3-input" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-group">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input" id="err_desc" name="err_desc" style="width:100%;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;">
+<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxx -->
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 Tutorials</h4>
+<a href="/html/default.asp">HTML Tutorial</a><br>
+<a href="/css/default.asp">CSS Tutorial</a><br>
+<a href="/js/default.asp">JavaScript Tutorial</a><br>
+<a href="/w3css/default.asp">W3.CSS Tutorial</a><br>
+<a href="/bootstrap/default.asp">Bootstrap Tutorial</a><br>
+<a href="/sql/default.asp">SQL Tutorial</a><br>
+<a href="/php/default.asp">PHP Tutorial</a><br>
+<a href="/jquery/default.asp">jQuery Tutorial</a><br>
+<a href="/angular/default.asp">Angular Tutorial</a><br>
+<a href="/xml/default.asp">XML Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 References</h4>
+<a href="/tags/default.asp">HTML Reference</a><br>
+<a href="/cssref/default.asp">CSS Reference</a><br>
+<a href="/jsref/default.asp">JavaScript Reference</a><br>
+<a href="/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+<a href="/browsers/default.asp">Browser Statistics</a><br>
+<a href="/php/php_ref_array.asp">PHP Reference</a><br>
+<a href="/colors/colors_names.asp">HTML Colors</a><br>
+<a href="/charsets/default.asp">HTML Character Sets</a><br>
+<a href="/jquery/jquery_ref_selectors.asp">jQuery Reference</a><br>
+<a href="/angular/angular_ref_directives.asp">AngularJS Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 Examples</h4>
+<a href="/html/html_examples.asp">HTML Examples</a><br>
+<a href="/css/css_examples.asp">CSS Examples</a><br>
+<a href="/js/js_examples.asp">JavaScript Examples</a><br>
+<a href="/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+<a href="/js/js_dom_examples.asp">HTML DOM Examples</a><br>
+<a href="/php/php_examples.asp">PHP Examples</a><br>
+<a href="/asp/asp_examples.asp">ASP Examples</a><br>
+<a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+<a href="/angular/angular_examples.asp">Angular Examples</a><br>
+<a href="/xml/xml_examples.asp">XML Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="/cert/default.asp">HTML Certificate</a><br>
+<a href="/cert/default.asp">HTML5 Certificate</a><br>
+<a href="/cert/default.asp">CSS Certificate</a><br>
+<a href="/cert/default.asp">JavaScript Certificate</a><br>
+<a href="/cert/default.asp">jQuery Certificate</a><br>
+<a href="/cert/default.asp">PHP Certificate</a><br>
+<a href="/cert/default.asp">Bootstrap Certificate</a><br>
+<a href="/cert/default.asp">XML Certificate</a><br>
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using this site, you agree to have read and accepted our <a href="/about/about_copyright.asp">terms of use</a>,
+<a href="/about/about_privacy.asp">cookie and privacy policy</a>.
+<a href="/about/about_copyright.asp">Copyright 1999-2016</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="http://www.w3schools.com/w3css/">Powered by W3.CSS</a>.<br><br>
+<a href="http://www.w3schools.com">
+<img style="width:150px;height:28px;border:0" src="/images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+</div>
+</div>
+</div>
+
+<!-- end of last sentence -->
+<!-- start pull down list -->
+
+<div id="nav_tutorials_content" style="display:none;">
+<span onclick='w3_close_nav("tutorials")' class='w3-closebtn w3-xlarge'>&times;</span>
+<div class='w3-row-padding'>
+<div class='w3-col l2 m4'>
+<h3>HTML/CSS</h3>
+<a href='/html/default.asp'>Learn HTML</a>
+<a href='/css/default.asp'>Learn CSS</a>
+<a href='/w3css/default.asp'>Learn W3.CSS</a>
+<a href='/colors/default.asp'>Learn Colors</a>
+<a href='/bootstrap/default.asp'>Learn Bootstrap</a>
+<a href='/howto/default.asp'>Learn How To</a>
+</div>
+<div class='w3-col l2 m4'>  
+<h3>JavaScript</h3>
+<a href='/js/default.asp'>Learn JavaScript</a>
+<a href='/jquery/default.asp'>Learn jQuery</a>
+<a href='/jquerymobile/default.asp'>Learn jQueryMobile</a>
+<a href='/appml/default.asp'>Learn AppML</a>
+<a href='/angular/default.asp'>Learn AngularJS</a>
+<a href='/ajax/default.asp'>Learn AJAX</a>
+<a href='/json/default.asp'>Learn JSON</a>
+</div>
+<div class='w3-col l2 m4'>   
+<h3>HTML Graphics</h3>
+<a href='/canvas/default.asp'>Learn Canvas</a>
+<a href='/svg/default.asp'>Learn SVG</a>
+<a href='/icons/default.asp'>Learn Icons</a>
+<a href='/googleapi/default.asp'>Learn Google Maps</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>Server Side</h3>
+<a href='/sql/default.asp'>Learn SQL</a>
+<a href='/php/default.asp'>Learn PHP</a>
+<a href='/asp/default.asp'>Learn ASP</a>
+<a href='/aspnet/default.asp'>Learn ASP.NET</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>Web Building</h3>
+<a href="/w3css/w3css_templates.asp">Web Templates</a>
+<a href='/browsers/default.asp'>Web Statistics</a>
+<a href='/cert/default.asp'>Web Certificates</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>XML Tutorials</h3>
+<a href='/xml/default.asp'>Learn XML</a>
+<a href='/xsl/default.asp'>Learn XSLT</a>
+</div>
+</div>
+</div>
+<div id="nav_references_content" style="display:none;">
+<span onclick='w3_close_nav("references")' class='w3-closebtn w3-xlarge'>&times;</span>
+<div class='w3-row-padding'>
+<div class='w3-col l2 m4'>
+<h3>HTML</h3>
+<a href='/tags/default.asp'>HTML Tag Reference</a>
+<a href='/tags/ref_eventattributes.asp'>HTML Event Reference</a>
+<a href='/colors/default.asp'>HTML Color Reference</a>
+<a href='/tags/ref_attributes.asp'>HTML Attribute Reference</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>CSS</h3>
+<a href='/cssref/default.asp'>CSS Reference</a>
+<a href='/cssref/css_selectors.asp'>CSS Selector Reference</a>
+<a href='/w3css/w3css_references.asp'>W3.CSS Reference</a>
+<a href='/bootstrap/bootstrap_ref_css_text.asp'>Bootstrap Reference</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>JavaScript</h3>
+<a href='/jsref/default.asp'>JavaScript Reference</a>
+<a href='/jsref/default.asp'>HTML DOM Reference</a>
+<a href='/jquery/jquery_ref_selectors.asp'>jQuery Reference</a>
+<a href='/jquerymobile/jquerymobile_ref_data.asp'>jQuery Mobile Reference</a>
+<a href='/angular/angular_ref_directives.asp'>AngularJS Reference</a>
+<a href='/googleAPI/google_maps_ref.asp'>Google Maps Reference</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>Server Side</h3>
+<a href='/php/php_ref_array.asp'>PHP Reference</a>
+<a href='/sql/sql_quickref.asp'>SQL Reference</a>
+<a href='/asp/asp_ref_response.asp'>ASP Reference</a>
+<a href='/aspnet/webpages_ref_classes.asp'>ASP.NET Reference</a>
+
+</div>
+<div class='w3-col l2 m4'>
+<h3>XML</h3>
+<a href='/xml/dom_nodetype.asp'>XML Reference</a>
+<a href='/xsl/xsl_w3celementref.asp'>XSLT Reference</a>
+<a href='/xml/schema_elements_ref.asp'>XML Schema Reference</a>
+<a href='/svg/svg_reference.asp'>SVG Reference</a>
+</div>
+<div class='w3-col l2 m4'>
+<h3>Charsets</h3>
+<a href='/charsets/default.asp'>HTML Character Sets</a>
+<a href='/charsets/ref_html_ascii.asp'>HTML ASCII</a>
+<a href='/charsets/ref_html_ansi.asp'>HTML ANSI</a>
+<a href='/charsets/ref_html_ansi.asp'>HTML Windows-1252</a>
+<a href='/charsets/ref_html_8859.asp'>HTML ISO-8859-1</a>
+<a href='/charsets/ref_html_symbols.asp'>HTML Symbols</a>
+<a href='/charsets/ref_html_utf8.asp'>HTML UTF-8</a>
+</div>
+</div>
+</div>
+<div id="nav_examples_content" style="display:none;">
+<span onclick='w3_close_nav("examples")' class='w3-closebtn w3-xlarge'>&times;</span>
+<div class='w3-row-padding'>
+<div class='w3-col l3 m6'>
+<h3>HTML/CSS</h3>
+<a href='/html/html_examples.asp'>HTML Examples</a>
+<a href='/css/css_examples.asp'>CSS Examples</a>
+<a href='/w3css/w3css_examples.asp'>W3.CSS Examples</a>
+</div>
+<div class='w3-col l3 m6'>
+<h3>JavaScript</h3>
+<a href='/js/js_examples.asp' target='_top'>JavaScript Examples</a>
+<a href='/js/js_dom_examples.asp' target='_top'>HTML DOM Examples</a>
+<a href='/jquery/jquery_examples.asp' target='_top'>jQuery Examples</a>
+<a href='/jquerymobile/jquerymobile_examples.asp' target='_top'>jQuery Mobile Examples</a>
+<a href='/angular/angular_examples.asp' target='_top'>AngularJS Examples</a>
+<a href='/ajax/ajax_examples.asp' target='_top'>AJAX Examples</a>
+</div>
+<div class='w3-col l3 m6'>
+<h3>Server Side</h3>
+<a href='/php/php_examples.asp' target='_top'>PHP Examples</a>
+<a href="/asp/asp_examples.asp" target="_top">ASP Examples</a>
+<a href="/aspnet/webpages_examples.asp" target="_top">ASP.NET Examples</a>
+</div>
+<div class='w3-col l3 m6'>
+<h3>XML</h3>
+<a href='/xml/xml_examples.asp' target='_top'>XML Examples</a>
+<a href='/xsl/xsl_examples.asp' target='_top'>XSL Examples</a>
+<a href='/xsl/xsl_examples.asp' target='_top'>XSLT Examples</a>
+<a href='/xsl/xpath_examples.asp' target='_top'>XPath Examples</a>
+<a href='/xml/schema_example.asp' target='_top'>XML Schema Examples</a>
+<a href='/svg/svg_examples.asp' target='_top'>SVG Examples</a>
+</div>
+</div>
+</div>
+<div id='nav_translate_content' style="display:none">
+<span onclick='w3_close_nav("translate")' class='w3-closebtn w3-xlarge'>&times;</span>
+<br><br>Translate w3schools.com:
+<div id='google_translate_element'></div>
+<br>
+</div>
+<div id='nav_search_content' style="display:none">
+<span onclick='w3_close_nav("search")' class='w3-closebtn w3-xlarge'>&times;</span>
+<br><br>
+<div class='searchdiv'>
+Search w3schools.com:
+<div id='googleSearch'><div class='gcse-search'></div></div>
+</div>
+<br>
+</div>
+<script src="/lib/w3schools_footer.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</body>
+</html>

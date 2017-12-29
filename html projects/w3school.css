@@ -1,0 +1,203 @@
+*{
+	box-sizing: border-box;
+}
+body {background: #eeeeee;
+	font-family: Arial;
+}
+.col-1  {width: 8.33%;}
+.col-2  {width: 16.66%;}
+.col-3  {width: 25%;}
+.col-4  {width: 33.33%;}
+.col-5  {width: 41.66%;}
+.col-6  {width: 50%;}
+.col-7  {width: 58.33%;}
+.col-8  {width: 66.66%;}
+.col-9  {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"]{
+	float: left;
+	padding: 15px;
+	border: 1px solid red;
+}
+.logo{
+	font-size:40px; 
+	font-weight:bold;
+	font-family: cursive;
+}
+.logo2{
+	float:right; 
+	font-variant:small-caps; 
+	padding:25px 0 0 0;
+	font-size: 20px;
+}
+ul.side-bar {
+	/*float:left;*/
+	height: 100%;
+	top:110px;
+	left:0;
+	margin:0;
+	padding: 0 0 40px 0; /* eliminate gaps */
+	position: fixed;
+	width: 150px;
+	background-color: #b5b5b5;
+	list-style-type: none;
+	color: black;
+	overflow: scroll;
+	overflow-y: hidden;
+	display: inline-block;
+}
+ul.side-bar:hover{
+	overflow-y: scroll;
+}
+ul.side-bar li{
+	padding: 5px 13px ;
+}
+ul.side-bar li:hover{
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+/*  ========================== */
+
+.main-content{
+	margin-left: 160px;
+	margin-top: 80px;
+	/*position: absolute;*/
+}
+section{
+	margin: 20px 5px;
+}
+ul.nav{
+	top: 70px;
+	left:0;
+	height: 40px;
+	/*overflow: hidden;*/
+	list-style-type: none;
+	width: 100%;
+	position: fixed;
+	color: white;
+	font-variant: small-caps;
+	margin: 0;
+	padding: 0 20px 0 0;
+	/*display: inline-block;*/
+	box-shadow: 0px 0px 2px black;
+	background-color: #5f5f5f;
+	font-size: 20px;
+	z-index: 5;
+}
+li.nav-left,li.nav-right,li.dropdown-right a, .dropbtn1, .dropbtn2, .dropbtn3{
+	float:left;
+	display: inline-block;
+	padding: 8px 10px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+li.nav-right, li.dropdown-right a { float:right; }
+li.nav-left:hover, li.nav-right:hover, li.dropdown-right a:hover{
+	background-color: black;
+	cursor: pointer;
+}
+.dropdown-content1,.dropdown-content2,.dropdown-content3 {
+	display: none;
+	position: absolute;
+	background-color: #000000;
+	color: green;
+	min-width: 160px;
+	z-index: 10;
+}
+.dropdown-content1 a,.dropdown-content2 a,.dropdown-content3 a{
+	color: black;
+	padding: 12px 12px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.show { display: block; 
+		}
+
+/* ===================================*/
+
+#heada:visited,#heada:active,#heada:link{
+	color: #00aa00;
+	text-decoration: none;
+}
+#heada:hover{
+	text-decoration: underline;
+}
+h1,h2{
+	font-weight: lighter;
+}
+div.intro{
+	background-image: url("/home/lkit/Pictures/wallpaper/7021584-scenic-nature-pictures-24368.jpg") ;
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin: 25px;
+	padding: 15px 10px 15px 10px;
+	font-family: "Arial";
+}
+span.highlight{
+	background-color: #ccc;
+	color: red;
+	padding: 2px;
+}
+.example{
+	background-color: lightgrey;
+	padding: 15px 20px 5px 10px;
+	box-shadow: 2px 2px 2px lightgrey;
+}
+.heading{
+	font-size: 19;
+	font-weight: bold;
+}
+.example p{
+	background-color: white;
+	padding: 10px;
+	border-left: 4px solid #00aa00;
+}
+
+.try{
+	background-color: #00aa00;
+	width: 130px;
+	color: white;
+	padding: 10px 10px; 
+	margin: 20px 5px; 
+	cursor:pointer;}
+.try:hover{
+	color: #00aa00;
+	background-color: white;
+	box-shadow: 3px 3px 5px grey;
+	transition-duration: 0.5s;
+}
+.properties table{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+	padding: 20px;
+}
+.properties th,.properties td{
+	text-align: left;
+	padding: 8px;
+}
+.properties tr:nth-child(odd){background-color: white;}
+.properties td:nth-child(odd) {text-decoration: underline;}
+.footer table{
+	width: 100%;
+	text-align: center;
+	font-size: 10px;
+
+}
+.footer td{
+	padding: 20px;
+}
+hr{
+	border:0;
+	height:0;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	/*border-bottom: 1px solid rgba(255,255,255,0.3);*/
+}
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/home/lkit/Programming/HTML/Project w3school/testing.css"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/home/lkit/Programming/HTML/Project w3school/testing.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+	box-sizing: border-box;
+}
+body {background: #ccc;
+	font-family: Arial;
+}
+
+#myProgress{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background-color: grey;
+}
+#myBar{
+	position: absolute;
+	width: 1%;
+	height: 100%;
+	background-color: green;	
+}
+
+#drawCircle{
+/*	width: 500px;
+	height: 150px;*/
+	border: 1px solid #0000ff;
+}
+
+</style>
+</head>
+<body>
+
+<img src="/home/lkit/Pictures/brick.jpg" id="brick" style="display:none" width="32" height="32">
+
+
+<button onclick="move()">run</button><br><br>
+<div id="myProgress">
+	<div id="myBar"></div>
+</div>
+
+<p id="progressNum" style="float:right">0%</p>
+<br>
+
+<!-- <canvas id="drawCircle" width="500" height="150" > your browser doesn't support</canvas> -->
+
+<svg width="1000" height="1000" id="svg1" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="500" cy="500" r="200" fill="rgba(255,0,0,0.3)"></circle>
+	<path></path>
+</svg>
+
+
+
+<script>
+function move(){
+	var elem= document.getElementById("myBar");
+	var elem2 = document.getElementById("progressNum");
+	var width=1;
+	var id = setInterval(frame,1);
+
+	function frame(){
+		if (width>=100){
+			clearInterval(id);
+		} else{
+			width++;
+			elem.style.width = width+'%';
+			elem2.innerHTML = width+'%';
+		}}
+}
+
+
+// window.onload = function(){
+// 	var c = document.getElementById("drawCircle");
+// 	var ctx = c.getContext("2d");
+// 	var index = 0;
+// 	var id = setInterval(frame,30);
+// 	function frame(){
+// 		if (index > 100){
+// 			clearInterval(id);
+// 		} else{
+// 			if (index<99){
+// 				ctx.beginPath();
+// 				ctx.arc(100,75,49,0,2*Math.PI);
+// 				ctx.fillStyle = "#ff0000";
+// 				ctx.fill();
+// 			}
+// 			index++;
+// 			var angle = (index/50 + 1.5)%2;
+// 			ctx.beginPath();
+// 			ctx.arc(100,75,50,1.5*Math.PI,angle*Math.PI);
+// 			if (index<99){
+// 			ctx.lineTo(100,75);
+// 			ctx.lineTo(100,125);}
+// 			ctx.fillStyle = "#aa0000";
+// 			ctx.fill();
+
+
+// 			// console.log(index+" "+angle);
+// 			ctx.beginPath();
+// 			ctx.arc(100,75,40,0,2*Math.PI);
+// 			ctx.fillStyle="#ccc";
+// 			ctx.fill();
+// 	}}
+// };
+
+window.onload = function(){ 
+	progressAnnulus(35);
+};
+
+
+
+function progressAnnulus (endPer){
+	var path = document.getElementsByTagName("path");
+	var svg1 = document.getElementById("svg1");
+	var index=0;
+	var id = setInterval(frame,10);
+
+	function printAnnulus(index){
+		angle = index/100*2*Math.PI;
+		var x = 500+200*Math.sin(angle);
+		var y = 500-200*Math.cos(angle);
+		if (index<= 50) { var arc=0; }
+		else { var arc=1;}
+		// console.log(index+" "+x+" "+y);
+		path[0].setAttribute("d","M 500 300 A 200 200,0,"+arc+",1,"+x+" "+y+" L 500 500 Z");
+		path[0].setAttribute("fill","red");
+		svg1.innerHTML += '<circle cx="500" cy="500" r="180" fill="#ccc"></circle>';
+		svg1.innerHTML += '<text x="470" y="500" font-size="35">'+index+'%</text>';		
+	}
+
+	function frame(){
+		if (index >= endPer){
+			clearInterval(id);
+			printAnnulus(index);
+		} else {
+			index ++;
+			printAnnulus(index);
+	}}
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

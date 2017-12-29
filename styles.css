@@ -1,0 +1,28 @@
+body {background-color: lightgrey;}
+h1 {
+	color:blue; 
+	background-color:red
+	font-size:300%
+}
+p {
+	color:green;
+	font-family: courier;
+	border: 1px solid black;
+	padding:20px;
+	margin: 50px;
+}
+
+#p01 {
+	color:blue;
+	font-family: Impact;
+}
+p.error{
+	color:red;
+}
+
+
+
+
+
+
+

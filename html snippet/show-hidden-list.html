@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+
+.dropdown_btn{
+	background-color: green;
+	color: white;
+	padding: 16px;
+	font-size:16px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+.dropdown_box{
+	position: absolute;
+	display:none;
+}
+.dropdown:hover .dropdown_box{
+	display: block;
+}
+
+ul{
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-bottom: 1px solid grey;
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	width: 215%;
+
+	/*overflow: hidden;*/
+}
+li{
+	text-align: center;
+	border-bottom: 1px solid grey;
+}
+li a{
+	display: block;
+	padding: 15px;	
+	color: black;
+	text-decoration: none;
+}
+li a:hover{
+	background-color: #0f0f0f;
+	color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+	<button class="dropdown_btn">move to here</button>
+	<div class="dropdown_box">
+		<ul>
+			<li><a href="blank">Home</a></li>
+			<li><a href="blank">News</a></li>
+			<li><a href="blank">Contact</a></li>
+			<li><a href="blank">About</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

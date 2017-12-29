@@ -1,0 +1,64 @@
+<head>
+<style type="text/css">
+body{
+	background-color: #ccc;
+}
+li{ 
+	list-style: none;
+}
+@media only screen{
+	.child{
+		color:white; 
+		font-size: 25px; 
+		padding: 20px 40px;
+		text-align:center;
+	}
+	.child:hover{
+		background-color: #20a000; cursor:pointer;
+	}
+	.flex-container{
+		display:flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		padding: 0; margin:0; top:0; left:0; right:0;
+		height: 80px;
+		position: absolute;
+		background-color: #30e000;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.flex-container{
+		justify-content: space-around;
+		height: 55px; 
+	}
+	.child { padding: 20px 5px;  font-size: 15px;}
+}
+@media only screen and (max-width: 300px){
+	.flex-container{
+		flex-flow: column wrap;
+		height: auto;
+	}
+	.child { width: 100%; }
+}
+	
+</style>
+</head>
+
+<body>
+
+<ul class="flex-container">
+	<li class="child">Home</li>
+	<li class="child">About</li>
+	<li class="child">Products</li>
+	<li class="child">Contact</li>
+</ul>
+
+
+
+
+
+
+
+
+
+</body>

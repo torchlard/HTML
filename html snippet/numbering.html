@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+body{
+	background-color: lightgrey;
+	counter-reset: section;
+}
+h1{
+	counter-reset: subsection;
+}
+h1::before{
+	counter-increment: section;
+	content:  counter(section) ". ";
+}
+h2::before{
+	counter-increment: subsection;
+	content:  counter(section) "." counter(subsection) " ";
+}
+
+</style>
+<body>
+<h1>Using CSS Counters:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h1>Learning Languages:</h1>
+<h2>PHP</h2>
+<h2>Java</h2>
+<h2>Python</h2>
+
+
+
+</body>
+</head>
+</html>
+
+
+

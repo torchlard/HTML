@@ -1,0 +1,112 @@
+<head>
+<style>
+text{
+	-webkit-user-select:none;
+	cursor: pointer;
+}
+body{
+	background-color: #e5e5e5;
+	padding: 2em;
+}
+p{	font-size: 4em; cursor: pointer; 
+	margin:90px;
+}
+.popup{
+	width:200px; height:70px;
+	position: absolute;
+	top: 50; left:50;
+	display: none;
+	border-radius: 35px;
+	position: absolute;
+}
+.popup .bar{
+	background-color: #fff;
+	height: 20px;
+}
+.popup .content{
+	background-color: #c0c0c0;
+	height: 50px;
+}
+.popup button {
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.popup #remove {
+	cursor: pointer;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="/home/lkit/Programming/Library/font-awesome/css/font-awesome.min.css">
+</head>
+
+<div class="popup">
+	<div class="bar">add troops
+		<i class="icon-remove" id="remove" style="float:right"></i> 
+	</div>
+	<div class="content">
+		<input type="range" min="0" step="1" onmousemove="showValue(this.value)" onchange="showValue(this.value)"/>
+		<span id="range">7</span>
+		<button id="ok">ok</button>
+	</div>
+</div>
+<p id="demo">5</p>
+
+<script>
+	
+
+
+var num,add;
+function refresh(){
+ 	num = parseInt($("p").text());
+}
+
+$("p").click(function(event){
+	refresh();
+	var text = event.target.getBoundingClientRect();
+	var x = text.left;
+	var y = text.top;
+
+	$("input").attr('max',num);
+	if (!add) add = num;
+	$("input").attr('value',add);
+	$("#range").text(add);
+
+	$(".popup").css({"display":"block"});
+
+	popup_pos(x,y);
+});
+
+$(".popup button").click(function(){
+	$(".popup").css({"display":"none"});
+	console.log(add,num);
+	document.getElementById("demo").innerHTML = add+num;
+});
+$(".popup #remove").click(function(){
+	$(".popup").css({"display":"none"});
+});
+
+
+function popup_pos(x,y){
+	$(".popup").css({"top":(y+20),"left":(x+20)});
+}
+function showValue(value){
+	document.getElementById("range").innerHTML=value;
+	add = parseInt(value);
+	console.log("show value:",add,num);
+
+}
+
+
+
+	
+</script>
+
+
+
+
+
+
+</body>
+
+

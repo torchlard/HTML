@@ -1,0 +1,79 @@
+/************** Menu **************/
+.list-group {
+	display: inline-block;
+	flex-direction: row;
+	text-align: center;
+}
+
+.list-item-wrapper {
+	display: inline-block;
+	margin: 2rem;
+	width: 26%;
+}
+
+.card-img-top {
+	width: 100%;
+	padding: .75rem 1.25rem;
+}
+
+.card-block {
+	min-height: 9rem;
+	overflow-y: auto;
+}
+
+input {
+	text-align: center;
+}
+
+.form-control:disabled, .form-control[readonly] {
+	background: none;
+}
+
+/************** Order-list **************/
+#order-list {
+	position: fixed;
+	margin: 2rem 1rem;
+	min-width: 22%;
+	right: 0;
+}
+
+#order-list .card-footer {
+	display: inline-flex;
+   justify-content: space-between;
+}
+
+/************** Food nav **************/
+#food-nav {
+	position: fixed;
+	top: 50%;
+	bottom: 50%;	
+}
+
+#food-nav a {	
+	height: 4rem;
+	width: 4rem;
+}
+
+#food-nav a:first-child {
+	background: blue;
+	color: #FFF;
+}
+#food-nav a:nth-child(2) {
+	background: red;
+	color: #FFF;
+}
+
+#food-nav i {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/************** Confirm Modal **************/
+#confirmModal .card-footer {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}

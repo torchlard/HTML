@@ -1,0 +1,55 @@
+<head>
+<style type="text/css">
+text{
+	-webkit-user-select:none;
+	cursor: pointer;
+}
+* {margin:0; padding:0;}
+body{
+	background-color: #ccc;
+	padding: 2em;
+}
+p{	font-size: 2em;}
+svg{position: absolute;}
+/*svg#svg {background-color: lightyellow; }*/
+/*.svg_container { 
+		background-color: yellow;
+	position: absolute;
+	width: 500; height: 500; 
+}*/
+button{font-size: 25px;}
+.svg_frame{background-color: orange;
+	width:900;  height:700; position: absolute;
+	overflow: hidden;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<button id="large">Larger</button>
+<button id="small">Smaller</button>
+
+<body>
+<p id="demo"></p>
+<!-- <canvas id="myCanvas"></canvas> -->
+<div class="svg_frame" id="framing">
+<svg height="300" width="300" viewBox="0 0 600 600" id="svg">
+	<rect height="600" width="300" fill="lightyellow" id="rect"/>
+	<rect x="300" height="600" width="300" fill="red" id="rect2"/>
+	<text x="300" y="300" font-size="60" id="text">11</text>
+	<circle cx="100" cy="100" r="10" fill="blue"/>
+</svg>
+</div>
+<!-- <img id="myimage" src="/home/lkit/Pictures/big_flowers.jpg" alt="my image"/> -->
+<script src="ttt.js"></script>
+
+
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+
+
+
+</body>
+
+

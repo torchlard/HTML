@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<!-- icons -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-1">
+			<div class="list-group" id="food-nav">
+				<a href="#" class="list-group-item list-group-item-action">
+					<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="list-group-item list-group-item-action disabled">
+					<i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+		<div class="col-8">
+			<div class="list-group" id="menu" data-toggle="items">
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/FiletOFish.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">Filet-O-Fish™</h4>
+							<h5 class="card-subtitle mt-4">$11.00</h5>							
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[1]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[1]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[1]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/BigMac.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">Big Mac®</h4>
+							<h5 class="card-subtitle mt-4">$21.30</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[2]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[2]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[2]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>					
+				</div>				
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/GCB.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">GCB®</h4>
+							<h5 class="card-subtitle mt-4">$22.50</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[3]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[3]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[3]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/McNuggets.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">McNuggets® (6pcs)</h4>
+							<h5 class="card-subtitle mt-4">$19.90</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[4]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[4]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[4]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/McWings.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">McWings® (4pcs)</h4>
+							<h5 class="card-subtitle mt-4">$22.80</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[5]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[5]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[5]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/McSpicyChickenFilet.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">McSpicy® Chicken Filet</h4>
+							<h5 class="card-subtitle mt-4">$23.00</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[6]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[6]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[6]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/McMuffin.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">Sausage McMuffin® with Egg</h4>
+							<h5 class="card-subtitle mt-4">$11.00</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[7]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[7]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[7]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="list-item-wrapper card">
+					<div class="item">
+						<img class="card-img-top" src="./img/McChicken.png">
+						<div class="card-block text-center">
+							<h4 class="card-title">McChicken®</h4>
+							<h5 class="card-subtitle mt-4">$11.00</h5>
+						</div>
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="minus" data-field="quant[8]">
+									<i class="fa fa-minus" aria-hidden="true"></i>
+								</button>
+							</span>
+							<input type="text" name="quant[8]" class="form-control input-number" value="0" min="0" max="99" aria-label="quantity" disabled>
+							<span class="input-group-btn">
+								<button class="btn btn-number" type="button" data-type="plus" data-field="quant[8]">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Order List -->
+		<div class="col-3">
+			<div class="card" id="order-list">
+				<div class="card-header">Order List</div>
+				<!-- Insert ordered items -->
+				<div class="card-block"></div>
+				<div class="card-footer">
+					<div class="text-muted">Total</div>
+					<div id="total"></div>					
+				</div>
+				<button type="button" class="btn btn-primary">Confirm</button>
+			</div>
+		</div>
+		<div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="Confirmation" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Warning</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Empty Order List. Please choose an menu item.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="Confirmation" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Confirmation</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary success">OK</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	 
+	 
+	 
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!-- Other JS import -->
+<script src="./main.js"></script>
+
+</body>
+</html>

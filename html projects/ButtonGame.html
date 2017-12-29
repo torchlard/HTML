@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+body{
+	background-color: #e0e0e0;
+}
+section { padding: 200px 400px; z-index: 1; position: absolute;}
+.wrapper { padding-left: 30px; }
+circle,text {cursor: pointer;}
+text { font-weight: bold; -webkit-user-select:none;}
+ul { padding-left: 55px; font-size:20px; -webkit-user-select:none;}
+ul li { display: inline-block;  }
+.gameEnd {width: 100%; height: 100%; position: absolute; z-index:10; 
+	opacity: 0.5; background-color: black;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="ButtonGame.js"></script>
+
+</head>
+<body>
+
+
+<section>
+	<div class="wrapper">
+		<svg width="200" height="200">
+			<circle cx="100" cy="100" r="85" stroke="green" fill="yellow" stroke-width="4"></circle>
+			<text x="75" y="100" fill="red">Press me</text>
+		</svg>
+	</div>
+
+	<ul class="time">
+		<li>Time remaining: </li>
+		<li id="remain"></li>
+		<li>s</li>
+	</ul>
+</section>
+
+
+</body>
+</html>
+
+
+
