@@ -1,13 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-  <script src="main.js"></script>
 </head>
-<body>
+<body onload="main()">
 
-<canvas id="canvas" width="900px" height="600px" style="border:1px solid #333333"></canvas>
+<canvas id="webgl" width="400" height="400">
+  Please use the browser supporting "canvas"
+</canvas>
 
+<script src="lib/webgl-utils.js"></script>
+<script src="lib/webgl-debug.js"></script>
+<script src="lib/cuon-utils.js"></script>
+<script src="MultiPoint.js"></script>
 
 </body>
 </html>
